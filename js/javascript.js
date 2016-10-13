@@ -3,6 +3,15 @@ var goBtn = document.getElementById("goBtn");
 var out = document.getElementById("outputbox");
 var convertBtn = document.getElementById("convertbtn");
 
+document.getElementById('pkmnInput').onkeypress = function(e)
+{
+    if (!e)
+      e = window.event;
+    var keyCode = e.keyCode || e.which;
+    if (keyCode == '13')
+      getinfo();
+}
+
 goBtn.onclick = getinfo; // click go button to get pokemon info
 convertBtn.onclick = convertunits;
 
